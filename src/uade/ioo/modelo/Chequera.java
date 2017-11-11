@@ -7,6 +7,7 @@ public class Chequera {
 	private ChequePropio chequePropio;
 
 	public ChequePropio getChequePropio() {
+		
 		return chequePropio;
 	}
 
