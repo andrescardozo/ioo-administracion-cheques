@@ -7,6 +7,7 @@ public class Cheque {
 	private double monto;
 
 	public Cheque(int numero, String tipo, double monto) {
+		
 		super();
 		this.numero = numero;
 		this.tipo = tipo;
@@ -35,5 +36,8 @@ public class Cheque {
 
 	public void setMonto(double monto) {
 		this.monto = monto;
+	}
+	
+	public void sePuedePagarCon() {
 	}
 }
