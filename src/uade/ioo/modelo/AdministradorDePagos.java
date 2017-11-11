@@ -4,11 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdministradorDePagos {
-	
+
 	private Cheque cheque;
+	private Chequera chequera;
 
 	public Cheque getCheque() {
+
 		return cheque;
+	}
+
+	public Chequera getChequera() {
+
+		return chequera;
 	}
 
 	public List<Cheque> obtenerChequesParaPagar(double monto) {
