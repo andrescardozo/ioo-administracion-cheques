@@ -8,11 +8,11 @@ public class ModeloListaPagarSevicios extends AbstractListModel<String> {
 
 	public String getElementAt(int arg0) {
 		// TODO Auto-generated method stub
-		return "Cheque";
+		return "Cheque disponible para pagar";
 	}
 
 	public int getSize() {
 		// TODO Auto-generated method stub
-		return 10;
+		return 4;
 	}
 }

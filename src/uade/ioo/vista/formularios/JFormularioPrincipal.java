@@ -45,11 +45,20 @@ public class JFormularioPrincipal extends JFrame {
 			}
 		});
 		
-		JMenuItem itemMostrarChequesAVencer = new JMenuItem("Mostrar cheques a vencer");
+		JMenuItem itemChequesDeTercerosAVencer = new JMenuItem("Cheques de terceros a vencer");
+		itemChequesDeTercerosAVencer.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				JFrame formularioChequesDeTercerosAVencer = new JFormularioChequesDeTercerosAVencer();
+				formularioChequesDeTercerosAVencer.setVisible(true);
+			}
+		});
 		
 		menuCheque.add(itemRegistarCheque);
 		menuCheque.add(itemPagarServicios);
-		menuCheque.add(itemMostrarChequesAVencer);
+		menuCheque.add(itemChequesDeTercerosAVencer);
 		
 		menuBar.add(menuCheque);
 		
