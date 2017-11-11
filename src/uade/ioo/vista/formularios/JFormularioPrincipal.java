@@ -1,5 +1,8 @@
 package uade.ioo.vista.formularios;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -21,6 +24,15 @@ public class JFormularioPrincipal extends JFrame {
 		JMenu menuCheque = new JMenu("Cheque");
 		
 		JMenuItem itemRegistarCheque = new JMenuItem("Regitrar cheque");
+		itemRegistarCheque.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				JFrame formularioRegistrarCheque = new JFormularioRegistrarCheque();
+				formularioRegistrarCheque.setVisible(true);
+			}
+		});
 		
 		JMenuItem itemPagarServicios = new JMenuItem("Pagar servicios");
 		
