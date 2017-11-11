@@ -17,6 +17,7 @@ public class JFormularioRegistrarCheque extends JFrame {
 		this.setSize(480, 320);
 		this.setTitle("Registrar cheque de terceros");
 		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		JLabel lblNumeroDeCheque = new JLabel();
 		lblNumeroDeCheque.setText("Ingrese el numero del cheque: ");
