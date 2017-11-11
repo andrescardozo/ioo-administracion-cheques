@@ -59,9 +59,21 @@ public class JFormularioReporte extends JFrame {
 			}
 		});
 		
+		JMenuItem itemSalir = new JMenuItem("Salir");
+		itemSalir.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				System.exit(0);
+			}
+		});
+		
 		menuCheque.add(itemRegistarCheque);
 		menuCheque.add(itemPagarServicios);
 		menuCheque.add(itemChequesDeTercerosAVencer);
+		menuCheque.addSeparator();
+		menuCheque.add(itemSalir);
 		
 		menuBar.add(menuCheque);
 		
