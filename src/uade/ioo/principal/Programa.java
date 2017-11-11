@@ -2,13 +2,13 @@ package uade.ioo.principal;
 
 import javax.swing.JFrame;
 
-import uade.ioo.vista.formularios.JFormularioPrincipal;
+import uade.ioo.vista.formularios.JFormularioReporte;
 
 public class Programa {
 	
 	public static void main (String[] args) {
 		
-		JFrame formularioPrincipal = new JFormularioPrincipal();
+		JFrame formularioPrincipal = new JFormularioReporte();
 		formularioPrincipal.setVisible(true);
 	}
 }

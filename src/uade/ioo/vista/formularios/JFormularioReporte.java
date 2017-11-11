@@ -8,11 +8,11 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-public class JFormularioPrincipal extends JFrame {
+public class JFormularioReporte extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	
-	public JFormularioPrincipal() {
+	public JFormularioReporte() {
 		
 		this.setSize(640, 480);
 		this.setTitle("Administrador de cheques");
