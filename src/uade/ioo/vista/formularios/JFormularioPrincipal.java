@@ -35,6 +35,15 @@ public class JFormularioPrincipal extends JFrame {
 		});
 		
 		JMenuItem itemPagarServicios = new JMenuItem("Pagar servicios");
+		itemPagarServicios.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				JFrame formularioPagarServicios = new JFormularioPagarServicios();
+				formularioPagarServicios.setVisible(true);
+			}
+		});
 		
 		JMenuItem itemMostrarChequesAVencer = new JMenuItem("Mostrar cheques a vencer");
 		
