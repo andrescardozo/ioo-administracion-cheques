@@ -1,4 +1,4 @@
-package ioo.modelo;
+package uade.ioo.modelo;
 
 public class Depositado extends EstadoCheque {
 

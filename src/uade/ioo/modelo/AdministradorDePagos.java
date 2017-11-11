@@ -1,4 +1,4 @@
-package ioo.modelo;
+package uade.ioo.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
