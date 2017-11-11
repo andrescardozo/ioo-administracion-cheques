@@ -7,6 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JTable;
+
+import uade.ioo.vista.formularios.modelo.ModeloTablaReporte;
 
 public class JFormularioReporte extends JFrame {
 
@@ -63,5 +66,9 @@ public class JFormularioReporte extends JFrame {
 		menuBar.add(menuCheque);
 		
 		this.setJMenuBar(menuBar);
+		
+		JTable reporte = new JTable(new ModeloTablaReporte());
+
+		this.getContentPane().add(reporte);
 	}
 }
