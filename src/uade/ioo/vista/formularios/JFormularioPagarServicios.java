@@ -16,8 +16,8 @@ public class JFormularioPagarServicios extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
-		JList<String> lista = new JList<String>(new ModeloListaPagarSevicios());
+		JList<String> serviciosAPagar = new JList<String>(new ModeloListaPagarSevicios());
 
-		this.getContentPane().add(lista);
+		this.getContentPane().add(serviciosAPagar);
 	}
 }

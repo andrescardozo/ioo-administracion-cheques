@@ -16,9 +16,9 @@ public class JFormularioChequesDeTercerosAVencer extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
-		JList<String> lista = new JList<String>(new ModeloListaChequesDeTercerosAVencer());
+		JList<String> chequesDeTercerosAVencer = new JList<String>(new ModeloListaChequesDeTercerosAVencer());
 
-		this.getContentPane().add(lista);
+		this.getContentPane().add(chequesDeTercerosAVencer);
 	}
 
 }
