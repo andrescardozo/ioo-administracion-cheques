@@ -3,6 +3,7 @@ package uade.ioo.vista.formularios;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class JFormularioPrincipal extends JFrame {
 
@@ -18,6 +19,16 @@ public class JFormularioPrincipal extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		
 		JMenu menuCheque = new JMenu("Cheque");
+		
+		JMenuItem itemRegistarCheque = new JMenuItem("Regitrar cheque");
+		
+		JMenuItem itemPagarServicios = new JMenuItem("Pagar servicios");
+		
+		JMenuItem itemMostrarChequesAVencer = new JMenuItem("Mostrar cheques a vencer");
+		
+		menuCheque.add(itemRegistarCheque);
+		menuCheque.add(itemPagarServicios);
+		menuCheque.add(itemMostrarChequesAVencer);
 		
 		menuBar.add(menuCheque);
 		
