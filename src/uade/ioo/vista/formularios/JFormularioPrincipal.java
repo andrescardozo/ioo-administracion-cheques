@@ -1,6 +1,8 @@
 package uade.ioo.vista.formularios;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 
 public class JFormularioPrincipal extends JFrame {
 
@@ -12,5 +14,13 @@ public class JFormularioPrincipal extends JFrame {
 		this.setTitle("Administrador de cheques");
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JMenuBar menuBar = new JMenuBar();
+		
+		JMenu menuCheque = new JMenu("Cheque");
+		
+		menuBar.add(menuCheque);
+		
+		this.setJMenuBar(menuBar);
 	}
 }
