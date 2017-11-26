@@ -54,11 +54,25 @@ public class JFormularioRegistrarCheque extends JFormularioBase implements IVist
 
 	@Override
 	public int getNumero() {
-		return Integer.parseInt(this.txtFldNumeroDeCheque.getText());
+		
+		int numeroDelCheque = 0;
+		
+		if (!this.txtFldNumeroDeCheque.getText().equals("")) {
+			numeroDelCheque = Integer.parseInt(this.txtFldNumeroDeCheque.getText());
+		}
+		
+		return numeroDelCheque;
 	}
 
 	@Override
 	public double getMonto() {
-		return Double.parseDouble(this.txtFldMontoDelCheque.getText());
+		
+		double montoDelCheque = 0;
+		
+		if (!this.txtFldMontoDelCheque.getText().equals("")) {
+			montoDelCheque = Double.parseDouble(this.txtFldMontoDelCheque.getText());
+		} 
+		
+		return montoDelCheque;
 	}
 }
