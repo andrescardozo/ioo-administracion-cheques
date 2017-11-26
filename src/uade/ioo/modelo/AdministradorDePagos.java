@@ -24,14 +24,26 @@ public class AdministradorDePagos extends Observado {
 
 	public List<Cheque> obtenerChequesParaPagar(double monto) {
 
-		Cheque uno = new Cheque(12323, monto / 2);
-		Cheque dos = new Cheque(1, monto / 2);
+		List<Cheque> chequesParaPagar = new ArrayList<Cheque>();
+		double montoTemporal = monto;
+		
+		for (Cheque cheque : cheques) {
+			
+			if (cheque.getMonto() <= montoTemporal) {
+				
+				montoTemporal -= cheque.getMonto();
+				chequesParaPagar.add(cheque);
+			}
+		}
+		
+		if (montoTemporal > 0) {
+			
+			ChequePropio chequePropio = new ChequePropio(0, montoTemporal);
+			
+			chequesParaPagar.add(chequePropio);
+		}
 
-		List<Cheque> cheques = new ArrayList<Cheque>();
-		cheques.add(uno);
-		cheques.add(dos);
-
-		return cheques;
+		return chequesParaPagar;
 	}
 
 	public Cheque generarChequeNuevo(double monto) {

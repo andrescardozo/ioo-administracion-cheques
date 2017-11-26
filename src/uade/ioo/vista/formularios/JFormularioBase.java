@@ -26,7 +26,6 @@ public class JFormularioBase extends JFrame implements IObservador {
 
 	@Override
 	public void actualizar() {
-		// TODO Auto-generated method stub
 
 	}
 }

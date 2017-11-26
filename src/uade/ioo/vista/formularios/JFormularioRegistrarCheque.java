@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 import uade.ioo.modelo.AdministradorDePagos;
 import uade.ioo.vista.comportamiento.IVistaRecibirCheque;
-import uade.ioo.vista.controlador.AgregarChequeController;
+import uade.ioo.vista.controlador.RegistrarChequeController;
 
 public class JFormularioRegistrarCheque extends JFormularioBase implements IVistaRecibirCheque {
 
@@ -43,7 +43,7 @@ public class JFormularioRegistrarCheque extends JFormularioBase implements IVist
 		
 		this.btnAgregarCheque.setText("Registrar cheque");
 		this.btnAgregarCheque.setPreferredSize(new Dimension(150, 30));
-		this.btnAgregarCheque.addActionListener(new AgregarChequeController(this.getModelo(), this));
+		this.btnAgregarCheque.addActionListener(new RegistrarChequeController(this.getModelo(), this));
 		
 		this.getContentPane().add(lblNumeroDeCheque);
 		this.getContentPane().add(txtFldNumeroDeCheque);

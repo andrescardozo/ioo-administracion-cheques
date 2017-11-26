@@ -7,12 +7,12 @@ import uade.ioo.modelo.AdministradorDePagos;
 import uade.ioo.modelo.ChequeTerceros;
 import uade.ioo.vista.comportamiento.IVistaRecibirCheque;
 
-public class AgregarChequeController implements ActionListener {
+public class RegistrarChequeController implements ActionListener {
 
 	private AdministradorDePagos modelo;
 	private IVistaRecibirCheque vista;
 
-	public AgregarChequeController(AdministradorDePagos modelo, IVistaRecibirCheque vista) {
+	public RegistrarChequeController(AdministradorDePagos modelo, IVistaRecibirCheque vista) {
 		
 		super();
 		this.modelo = modelo;
