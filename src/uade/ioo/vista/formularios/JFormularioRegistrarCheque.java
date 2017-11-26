@@ -33,7 +33,7 @@ public class JFormularioRegistrarCheque extends JFormularioBase implements IVist
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
-		this.lblNumeroDeCheque.setText("Ingrese el numero del cheque: ");
+		this.lblNumeroDeCheque.setText("Ingrese el número del cheque: ");
 		
 		this.txtFldNumeroDeCheque.setColumns(12);
 		
