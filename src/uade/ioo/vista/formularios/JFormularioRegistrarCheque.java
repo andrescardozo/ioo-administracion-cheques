@@ -1,16 +1,30 @@
 package uade.ioo.vista.formularios;
 
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class JFormularioRegistrarCheque extends JFrame {
+import uade.ioo.modelo.AdministradorDePagos;
+import uade.ioo.vista.comportamiento.IVistaRecibirCheque;
+import uade.ioo.vista.controlador.AgregarChequeController;
+
+public class JFormularioRegistrarCheque extends JFormularioBase implements IVistaRecibirCheque {
 
 	private static final long serialVersionUID = 1L;
 	
-	public JFormularioRegistrarCheque() {
+	private JLabel lblNumeroDeCheque = new JLabel();
+	private JTextField txtFldNumeroDeCheque = new JTextField();
+	private JLabel lblMontoDelCheque = new JLabel();
+	private JTextField txtFldMontoDelCheque = new JTextField();
+	private JButton btnAgregarCheque = new JButton();
+	
+	public JFormularioRegistrarCheque(AdministradorDePagos modelo) {
+		
+		super(modelo);
 		
 		this.getContentPane().setLayout(new FlowLayout());
 		
@@ -19,21 +33,32 @@ public class JFormularioRegistrarCheque extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
-		JLabel lblNumeroDeCheque = new JLabel();
-		lblNumeroDeCheque.setText("Ingrese el numero del cheque: ");
+		this.lblNumeroDeCheque.setText("Ingrese el numero del cheque: ");
 		
-		JTextField txtFldNumeroDeCheque = new JTextField();
-		txtFldNumeroDeCheque.setColumns(12);
+		this.txtFldNumeroDeCheque.setColumns(12);
 		
-		JLabel lblMontoDelCheque = new JLabel();
-		lblMontoDelCheque.setText("Ingrese el monto del cheque: ");
+		this.lblMontoDelCheque.setText("Ingrese el monto del cheque: ");
 		
-		JTextField txtFldMontoDelCheque = new JTextField();
-		txtFldMontoDelCheque.setColumns(12);
+		this.txtFldMontoDelCheque.setColumns(12);
+		
+		this.btnAgregarCheque.setText("Registrar cheque");
+		this.btnAgregarCheque.setPreferredSize(new Dimension(150, 30));
+		this.btnAgregarCheque.addActionListener(new AgregarChequeController(this.getModelo(), this));
 		
 		this.getContentPane().add(lblNumeroDeCheque);
 		this.getContentPane().add(txtFldNumeroDeCheque);
 		this.getContentPane().add(lblMontoDelCheque);
 		this.getContentPane().add(txtFldMontoDelCheque);
+		this.getContentPane().add(btnAgregarCheque);
+	}
+
+	@Override
+	public int getNumero() {
+		return Integer.parseInt(this.txtFldNumeroDeCheque.getText());
+	}
+
+	@Override
+	public double getMonto() {
+		return Double.parseDouble(this.txtFldMontoDelCheque.getText());
 	}
 }
