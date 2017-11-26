@@ -3,14 +3,12 @@ package uade.ioo.modelo;
 public class Cheque {
 
 	private int numero;
-	private String tipo;
 	private double monto;
 
-	public Cheque(int numero, String tipo, double monto) {
+	public Cheque(int numero, double monto) {
 		
 		super();
 		this.numero = numero;
-		this.tipo = tipo;
 		this.monto = monto;
 	}
 
@@ -22,14 +20,6 @@ public class Cheque {
 		this.numero = numero;
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
 	public double getMonto() {
 		return monto;
 	}
@@ -39,5 +29,8 @@ public class Cheque {
 	}
 	
 	public void sePuedePagarCon() {
+	}
+	
+	public void getMontoDisponiblePago() {
 	}
 }
