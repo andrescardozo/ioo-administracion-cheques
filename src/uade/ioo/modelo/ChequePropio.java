@@ -2,9 +2,9 @@ package uade.ioo.modelo;
 
 public class ChequePropio extends Cheque {
 
-	public ChequePropio(int numero, String tipo, double monto) {
+	public ChequePropio(int numero, double monto) {
 		
-		super(numero, tipo, monto);
+		super(numero, monto);
 		// TODO Auto-generated constructor stub
 	}
 }
