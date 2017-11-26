@@ -8,9 +8,9 @@ public class ChequeTerceros extends Cheque {
 		return estadoCheque;
 	}
 	
-	public ChequeTerceros(int numero, String tipo, double monto) {
+	public ChequeTerceros(int numero, double monto) {
 		
-		super(numero, tipo, monto);
+		super(numero, monto);
 		// TODO Auto-generated constructor stub
 	}
 }
