@@ -26,12 +26,12 @@ public class JFormularioRegistrarCheque extends JFormularioBase implements IVist
 		
 		super(modelo);
 		
-		this.getContentPane().setLayout(new FlowLayout());
-		
 		this.setSize(480, 320);
 		this.setTitle("Registrar cheque de terceros");
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		
+		this.getContentPane().setLayout(new FlowLayout());
 		
 		this.lblNumeroDeCheque.setText("Ingrese el número del cheque: ");
 		
