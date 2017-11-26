@@ -1,5 +1,6 @@
 package uade.ioo.vista.formularios;
 
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,6 +28,8 @@ public class JFormularioReporte extends JFormularioBase {
 		this.setTitle("Administrador de cheques");
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		this.getContentPane().setLayout(new FlowLayout());
 
 		JMenuBar menuBar = new JMenuBar();
 
@@ -49,7 +52,7 @@ public class JFormularioReporte extends JFormularioBase {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				JFrame formularioPagarServicios = new JFormularioPagarServicios();
+				JFrame formularioPagarServicios = new JFormularioPagarServicios(getModelo());
 				formularioPagarServicios.setVisible(true);
 			}
 		});
@@ -90,7 +93,7 @@ public class JFormularioReporte extends JFormularioBase {
 		this.getContentPane().add(reporte);
 
 		this.getContentPane().add(new JLabel("Monto Total: "));
-		this.getContentPane().add(lblMontoTotal);
+		this.getContentPane().add(this.lblMontoTotal);
 		this.actualizar();
 	}
 
